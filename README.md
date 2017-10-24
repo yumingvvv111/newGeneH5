@@ -1,5 +1,5 @@
 //二叉树横向遍历
-
+```
 function TreeNode(val){
         this.val = val;
         this.left = null;
@@ -50,3 +50,4 @@ function TreeNode(val){
       }
 
       walk(v1);
+```
