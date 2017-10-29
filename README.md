@@ -25,8 +25,8 @@ function TreeNode(val){
       v5.right = v9;
 
       var arr = [];
-
-      function walk(root, num){
+     //方法1
+      function walk(root, num){
         if(typeof num === 'undefined'){
           num = 0;
         }
@@ -50,4 +50,34 @@ function TreeNode(val){
       }
 
       walk(v1);
+      
+      //方法2
+      function walk2(root){
+        var index = 0;
+        var arr = [];
+        getNextArray(arr, root);
+        printLayer(arr);
+        function getNextArray(arr, v){
+          console.log(index + '::', v.val);
+          if(v.left){
+            arr.push(v.left);
+          }
+          if(v.right){
+            arr.push(v.right);
+          }
+          index === 0 && index++;
+        }
+        function printLayer(arr){
+          var _arr = [];
+          arr.forEach(function(v){
+            getNextArray(_arr, v);
+          });
+          if(_arr.length > 0){
+            index++;
+            printLayer(_arr);
+          }
+        }
+      }
+
+      walk2(v1);
 ```
