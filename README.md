@@ -1,5 +1,5 @@
-//二叉树横向遍历
-```
+## //二叉树横向遍历
+```js
 function TreeNode(val){
         this.val = val;
         this.left = null;
@@ -80,4 +80,25 @@ function TreeNode(val){
       }
 
       walk2(v1);
+```
+## 格式化数字
+```js
+function formatNumber(val){
+        var str = val.toString().replace(/^\D/,'');
+        var len = str.length;
+        var num = 0;
+        var arr = [];
+        var pre = val < 0 ? '-' : '';
+        while(len--){
+          var n = +str[len];
+          arr.unshift(n);
+          if(++num % 3 === 0 && num >= 3 && str.length > 3 && len > 0){
+            arr.unshift(',');
+            num = 0 ;
+          }
+        }
+        return pre + arr.join('');
+      }
+
+      console.log(formatNumber(-1234567890235));
 ```
