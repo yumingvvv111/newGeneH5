@@ -103,7 +103,7 @@ function formatNumber(val){
       console.log(formatNumber(-1234567890235));
 ```
 
-##快速排序
+## 快速排序
 ```js
 function quickSort(arr){
     var len = arr.length;
