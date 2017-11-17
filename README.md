@@ -102,3 +102,28 @@ function formatNumber(val){
 
       console.log(formatNumber(-1234567890235));
 ```
+
+##快速排序
+```js
+function quickSort(arr){
+    var len = arr.length;
+    var middleIndex = Math.floor(len/2);
+    var leftArr = [],rightArr = [];
+    for(var i = 0; i < len; i++){
+      var currentVal = arr[i];
+      var middleVal = arr[middleIndex];
+      if(middleIndex !== i){
+        if(currentVal < middleVal){
+          leftArr.push(currentVal);
+        }else{
+          rightArr.push(currentVal);
+        }
+      }
+    }
+    var leftResult = leftArr.length > 1 ? quickSort(leftArr) : leftArr;
+    var rightResult = rightArr.length > 1 ? quickSort(rightArr) : rightArr;
+    return leftResult.concat([middleVal], rightResult);
+  }
+
+  console.log(quickSort([6,4,1,7,1,2,9,8,0]));
+```
