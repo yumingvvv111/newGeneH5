@@ -127,3 +127,22 @@ function quickSort(arr){
 
   console.log(quickSort([6,4,1,7,1,2,9,8,0]));
 ```
+
+## //插入排序
+```js
+  function sort2(arr){
+    for(var i = 1, len = arr.length, item; i < len; i++){
+      item = arr[i];
+      var j = i - 1;
+      var item2 = arr[j];
+      while(j >= 0 && item < item2){
+        arr[j + 1] = arr[j];
+        j--;
+        item2 = arr[j];
+      }
+      arr[j + 1] = item;
+    }
+    return arr;
+  }
+  console.log(sort2([6,4,1,7,1,2,9,8,0]));
+```
