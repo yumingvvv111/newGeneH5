@@ -1,7 +1,7 @@
 {
-  "name": "admin-on-rest",
+  "name": "geneH5",
   "version": "1.2.2",
-  "description": "A frontend Framework for building admin applications on top of REST services, using ES6, React and Material UI",
+  "description": "mie",
   "files": [
     "*.md",
     "docs/*.md",
@@ -13,11 +13,8 @@
     "test": "make test"
   },
   "authors": [
-    "François Zaninotto"
+    "yumingvvv"
   ],
-  "repository": "marmelab/admin-on-rest",
-  "homepage": "https://github.com/marmelab/admin-on-rest#readme",
-  "bugs": "https://github.com/marmelab/admin-on-rest/issues",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "~6.24.1",
